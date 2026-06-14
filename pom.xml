@@ -48,6 +48,12 @@
             <artifactId>opentelemetry-exporter-logging</artifactId>
         </dependency>
 
+        <!-- Prometheus Metrics Endpoint -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+
         <!-- JSON Logging -->
         <dependency>
             <groupId>net.logstash.logback</groupId>
