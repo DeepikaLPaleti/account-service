@@ -2,6 +2,8 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: account-service
   datasource:
     url: jdbc:h2:mem:accountdb
     driverClassName: org.h2.Driver
@@ -20,7 +22,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: health
+        include: health,info,metrics
   endpoint:
     health:
       show-details: always
+  tracing:
+    sampling:
+      probability: 1.0
